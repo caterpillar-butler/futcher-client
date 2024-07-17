@@ -2,3 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.oswald-unique {
+  font-family: 'Oswald', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* 원하는 weight 값을 사용하세요 */
+  font-style: normal;
+}
