@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
+import { Footer } from 'components';
 import { BrowserRouter } from 'react-router-dom';
-import Footer from '../../components/Footer';
 
 describe('Footer Component', () => {
   test('renders Footer component correctly', () => {
@@ -21,6 +21,8 @@ describe('Footer Component', () => {
     expect(screen.getByLabelText('Twitter')).toBeInTheDocument();
 
     // Check for copyright text
-    expect(screen.getByText(/Copyright 2021 BR Media Inc./i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Copyright 2021 BR Media Inc./i)
+    ).toBeInTheDocument();
   });
 });

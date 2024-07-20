@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
+import { Header } from 'components';
 import { BrowserRouter } from 'react-router-dom';
-import Header from '../../components/Header';
 
 describe('Header Component', () => {
   test('renders Header component correctly', () => {
