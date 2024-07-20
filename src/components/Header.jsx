@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import { useState } from 'react';
+import { Img } from 'react-image';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -9,13 +11,13 @@ export default function Header() {
 
   return (
     <header className="bg-orange-400 text-white p-4 h-450 relative">
-      <a
-        href="#"
+      <Link
+        to="/"
         className="text-4xl font-bold text-black absolute top-4 left-4 oswald-unique"
       >
         FoodieFinder
-      </a>
-      <a href="#" className="absolute top-4 right-4" onClick={toggleModal}>
+      </Link>
+      <Link to="#" className="absolute top-4 right-4" onClick={toggleModal}>
         <span className="material-symbols-outlined text-60px">
           account_circle
         </span>
@@ -29,36 +31,40 @@ export default function Header() {
                 <span class="material-symbols-outlined mr-10 leading-snug text-32px">
                   person
                 </span>
-                <a href="" className="relative top-[-9px] leading-none">
+                <Link to="#" className="relative top-[-9px] leading-none">
                   로그인
-                </a>
+                </Link>
               </li>
               <li className="px-4 py-2 text-black text-18px w-218 h-60 hover:bg-yellow-100 cursor-pointer">
                 <span class="material-symbols-outlined mr-10 leading-snug text-32px">
                   person
                 </span>
-                <a href="" className="relative top-[-9px] leading-none">
+                <Link to="#" className="relative top-[-9px] leading-none">
                   회원가입
-                </a>
+                </Link>
               </li>
               <li className="px-4 py-2 text-black text-18px w-218 h-60 hover:bg-yellow-100 cursor-pointer">
                 <span class="material-symbols-outlined mr-10 leading-snug text-32px">
                   search
                 </span>
-                <a href="" className="relative top-[-9px] leading-none">
+                <Link to="#" className="relative top-[-9px] leading-none">
                   검색하기
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         )}
-      </a>
+      </Link>
       <div className="flex flex-col items-center justify-center h-full">
-        <a href="#" className="h-220 w-220">
+        <Link to="#" className="h-220 w-220">
           <div className="bg-white h-220 w-220 border border-solid border-white rounded-full flex items-center justify-center -mt-10">
-            <img src="" alt="Placeholder image" className="rounded-full" />
+            <Img
+              src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_960_720.jpg"
+              alt="Placeholder image"
+              className="rounded-full"
+            />
           </div>
-        </a>
+        </Link>
         <div className="text-center mt-40px ">
           <p className="text-27px mt-5px text-black">미식가들의 천국,</p>
           <p className="text-27px mt-5px text-black">

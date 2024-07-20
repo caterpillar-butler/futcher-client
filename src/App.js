@@ -1,6 +1,6 @@
+import { Layout } from 'layouts';
+import { Dashboard, NotFound } from 'pages';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Layout } from './layout';
-import { Dashboard, NotFound } from './page';
 
 function App() {
   return (
