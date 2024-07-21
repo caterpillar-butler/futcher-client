@@ -31,7 +31,7 @@ export default function Header() {
                 <span class="material-symbols-outlined mr-10 leading-snug text-32px">
                   person
                 </span>
-                <Link to="#" className="relative top-[-9px] leading-none">
+                <Link to="/login" className="relative top-[-9px] leading-none">
                   로그인
                 </Link>
               </li>
@@ -39,7 +39,7 @@ export default function Header() {
                 <span class="material-symbols-outlined mr-10 leading-snug text-32px">
                   person
                 </span>
-                <Link to="#" className="relative top-[-9px] leading-none">
+                <Link to="/register" className="relative top-[-9px] leading-none">
                   회원가입
                 </Link>
               </li>
@@ -47,7 +47,7 @@ export default function Header() {
                 <span class="material-symbols-outlined mr-10 leading-snug text-32px">
                   search
                 </span>
-                <Link to="#" className="relative top-[-9px] leading-none">
+                <Link to="/search" className="relative top-[-9px] leading-none">
                   검색하기
                 </Link>
               </li>
