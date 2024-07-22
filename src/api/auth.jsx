@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_URL = process.env.REACT_APP_SERVER_URL;
 
-async function registerUser(userDto) {
+export default async function registerUser(userDto) {
   try {
     // console.log('Request Payload:', userDto);
     const response = await axios.post(`${API_URL}/api/auth/register`, userDto);
@@ -13,5 +13,3 @@ async function registerUser(userDto) {
     throw error.response.data;
   }
 }
-
-export default registerUser;
