@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
-import { Header } from 'components';
+import { DashBoardHeader } from 'components';
 import { BrowserRouter } from 'react-router-dom';
 
 describe('Header Component', () => {
   test('renders Header component correctly', () => {
     render(
       <BrowserRouter>
-        <Header />
+        <DashBoardHeader />
       </BrowserRouter>
     );
 
