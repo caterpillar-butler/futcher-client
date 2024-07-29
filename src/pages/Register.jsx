@@ -6,7 +6,6 @@ import { RegisterForm } from 'components';
 export default function Register() {
   const [formData, handleChange] = useForm({
     email: '',
-    name: '',
     password: '',
     confirmPassword: '',
     phone: '',
@@ -14,6 +13,8 @@ export default function Register() {
     verificationCode: '',
     birth: '',
     gender: '',
+    isPhoneVerified: true,
+    isEmailVerified: true,
   });
 
   const handleSubmit = async e => {

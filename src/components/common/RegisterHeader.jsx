@@ -9,7 +9,7 @@ export default function HeaderRegister() {
   };
 
   return (
-    <header className="bg-blue-400 text-white p-4 h-20 flex items-center justify-between relative">
+    <header className="bg-orange-400 text-white p-4 h-20 flex items-center justify-between relative">
       <div className="flex items-center">
         <div className="bg-gray-300 rounded-full h-16 w-16 mr-4"></div>
         <Link to="/" className="text-4xl font-bold text-black oswald-unique">
