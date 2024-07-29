@@ -8,10 +8,13 @@ module.exports = {
         220: '220px',
         280: '280px',
         60: '60px',
+        140: '140px',
+        100: '100px',
       },
       width: {
         220: '220px',
         250: '250px',
+        100: '100px',
       },
       borderRadius: {
         full: '50%',
