@@ -25,7 +25,7 @@ export default function HeaderRegister() {
         <button className="absolute top-4 right-4 cursor-pointer" onClick={toggleModal}>
           <span className="material-symbols-outlined text-60px">account_circle</span>
           {isModalOpen && (
-            <div className="absolute right-0 mt-2 w-250 h-280 bg-white border border-gray-300 rounded-lg shadow-lg">
+            <div className="absolute right-0 mt-2 w-250 h-280 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
               <ul>
                 <li className="px-4 py-2 text-black w-218 h-60 mt-5 text-20px border-b border-gray-500">
                   로그인이 필요합니다.
