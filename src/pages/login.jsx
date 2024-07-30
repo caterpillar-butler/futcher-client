@@ -1,5 +1,5 @@
 import React from 'react';
-import {Footer, Header2} from 'components';
+import { Footer, Header2 } from 'components';
 
 const Login = () => {
   return (

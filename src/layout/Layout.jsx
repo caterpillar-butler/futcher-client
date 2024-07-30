@@ -1,4 +1,4 @@
-import { Footer, RegisterHeader, DashBoardHeader } from 'components';
+import { Footer, Header2, DashBoardHeader } from 'components';
 import { useLocation } from 'react-router-dom';
 
 export default function Layout({ children }) {
@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   const renderHeader = () => {
     switch (location.pathname) {
       case '/register':
-        return <RegisterHeader />;
+        return <Header2 />;
       default:
         return <DashBoardHeader />;
     }
