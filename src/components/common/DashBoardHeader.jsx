@@ -11,50 +11,39 @@ export default function Header() {
 
   return (
     <header className="bg-orange-400 text-white p-4 h-450 relative">
-      <Link
-        to="/"
-        className="text-4xl font-bold text-black absolute top-4 left-4 oswald-unique"
-      >
+      <Link to="/" className="text-4xl font-bold text-black absolute top-4 left-4 oswald-unique">
         FoodieFinder
       </Link>
-      <Link to="#" className="absolute top-4 right-4" onClick={toggleModal}>
-        <span className="material-symbols-outlined text-60px">
-          account_circle
-        </span>
+      <button className="absolute top-4 right-4" onClick={toggleModal}>
+        <span className="material-symbols-outlined text-60px">account_circle</span>
         {isModalOpen && (
           <div className="absolute right-0 mt-2 w-250 h-280 bg-white border border-gray-300 rounded-lg shadow-lg">
             <ul>
               <li className="px-4 py-2 text-black w-218 h-60 mt-5 text-20px border-b border-gray-500">
                 로그인이 필요합니다.
               </li>
-              <li className="px-4 py-2 text-black text-18px w-218 h-60 hover:bg-yellow-100 cursor-pointer">
-                <span class="material-symbols-outlined mr-10 leading-snug text-32px">
-                  person
-                </span>
-                <Link to="/login" className="relative top-[-9px] leading-none">
+              <Link to="/login" className="relative top-[-9px] leading-none">
+                <li className="px-4 py-2 text-black text-18px w-218 h-60 hover:bg-yellow-100 cursor-pointer">
+                  <span className="material-symbols-outlined mr-10 leading-snug text-32px">person</span>
                   로그인
-                </Link>
-              </li>
-              <li className="px-4 py-2 text-black text-18px w-218 h-60 hover:bg-yellow-100 cursor-pointer">
-                <span class="material-symbols-outlined mr-10 leading-snug text-32px">
-                  person
-                </span>
-                <Link to="/register" className="relative top-[-9px] leading-none">
+                </li>
+              </Link>
+              <Link to="/register" className="relative top-[-9px] leading-none">
+                <li className="px-4 py-2 text-black text-18px w-218 h-60 hover:bg-yellow-100 cursor-pointer">
+                  <span className="material-symbols-outlined mr-10 leading-snug text-32px">person</span>
                   회원가입
-                </Link>
-              </li>
-              <li className="px-4 py-2 text-black text-18px w-218 h-60 hover:bg-yellow-100 cursor-pointer">
-                <span class="material-symbols-outlined mr-10 leading-snug text-32px">
-                  search
-                </span>
-                <Link to="/search" className="relative top-[-9px] leading-none">
+                </li>
+              </Link>
+              <Link to="/search" className="relative top-[-9px] leading-none">
+                <li className="px-4 py-2 text-black text-18px w-218 h-60 hover:bg-yellow-100 cursor-pointer">
+                  <span className="material-symbols-outlined mr-10 leading-snug text-32px">search</span>
                   검색하기
-                </Link>
-              </li>
+                </li>
+              </Link>
             </ul>
           </div>
         )}
-      </Link>
+      </button>
       <div className="flex flex-col items-center justify-center h-full">
         <Link to="#" className="h-220 w-220">
           <div className="bg-white h-220 w-220 border border-solid border-white rounded-full flex items-center justify-center -mt-10">
@@ -67,9 +56,7 @@ export default function Header() {
         </Link>
         <div className="text-center mt-40px ">
           <p className="text-27px mt-5px text-black">미식가들의 천국,</p>
-          <p className="text-27px mt-5px text-black">
-            당신만의 숨겨진 맛집을 찾아드립니다!
-          </p>
+          <p className="text-27px mt-5px text-black">당신만의 숨겨진 맛집을 찾아드립니다!</p>
         </div>
       </div>
     </header>
