@@ -1,10 +1,10 @@
 import React from 'react';
-import { Footer, Header2 } from 'components';
+import { Footer, RegisterHeader } from 'components';
 
 const Login = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header2 />
+      <RegisterHeader />
       <main className="flex-grow p-4"></main>
       <Footer />
     </div>

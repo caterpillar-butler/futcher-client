@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Img } from 'react-image';
 
 export default function HeaderRegister() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,14 +15,14 @@ export default function HeaderRegister() {
         <div className="absolute left-4 flex flex-col items-center">
           <Link href="/" className="h-100 w-100">
             <div className="bg-white h-100 w-100 border border-solid border-white rounded-full">
-              <image src="" alt="Placeholder image" className="rounded-full" />
+              <Img src="" alt="Placeholder image" className="rounded-full" />
             </div>
           </Link>
         </div>
         <Link href="/" className="text-5xl font-bold text-black flex justify-center items-center oswald-unique">
           FoodieFinder
         </Link>
-        <Link href="/" className="absolute top-4 right-4" onClick={toggleModal}>
+        <div className="absolute top-4 right-4 cursor-pointer" onClick={toggleModal}>
           <span className="material-symbols-outlined text-60px">account_circle</span>
           {isModalOpen && (
             <div className="absolute right-0 mt-2 w-250 h-280 bg-white border border-gray-300 rounded-lg shadow-lg">
@@ -50,7 +51,7 @@ export default function HeaderRegister() {
               </ul>
             </div>
           )}
-        </Link>
+        </div>
       </header>
     </div>
   );
