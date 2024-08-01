@@ -22,7 +22,7 @@ export async function requestPhoneVerification(phone) {
 
 export async function verifyPhoneCode(phone, code) {
   try {
-    const response = await axios.post(`${API_URL}/api/auth/verify-phone-code`, { phone, code });
+    const response = await axios.post(`${API_URL}/api/auth/phone-verification/code`, { phone, code });
     return response.data;
   } catch (error) {
     throw error.response.data;
@@ -40,7 +40,7 @@ export async function requestEmailVerification(email) {
 
 export async function verifyEmailCode(email, code) {
   try {
-    const response = await axios.post(`${API_URL}/api/auth/verify-email-code`, { email, code });
+    const response = await axios.post(`${API_URL}/api/auth/email-verification/code`, { email, code });
     return response.data;
   } catch (error) {
     throw error.response.data;

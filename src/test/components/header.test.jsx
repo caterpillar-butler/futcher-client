@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import { DashBoardHeader } from 'components';
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 
 describe('Header Component', () => {
   test('renders Header component correctly', () => {
     render(
-      <BrowserRouter>
+      <MemoryRouter>
         <DashBoardHeader />
-      </BrowserRouter>
+      </MemoryRouter>,
     );
 
     // Check for logo link
@@ -15,8 +15,6 @@ describe('Header Component', () => {
 
     // Check for text content
     expect(screen.getByText('미식가들의 천국,')).toBeInTheDocument();
-    expect(
-      screen.getByText('당신만의 숨겨진 맛집을 찾아드립니다!')
-    ).toBeInTheDocument();
+    expect(screen.getByText('당신만의 숨겨진 맛집을 찾아드립니다!')).toBeInTheDocument();
   });
 });

@@ -1,34 +1,24 @@
 import React from 'react';
-import { useForm } from 'hooks';
+import { useForm } from 'react-hook-form';
 import { registerUser } from 'api';
 import { RegisterForm } from 'components';
+import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
-  const [formData, handleChange] = useForm({
-    email: '',
-    password: '',
-    confirmPassword: '',
-    phone: '',
-    phoneVerificationCode: '',
-    verificationCode: '',
-    birth: '',
-    gender: '',
-    isPhoneVerified: true,
-    isEmailVerified: true,
-  });
+  const { register, handleSubmit, formState: { errors }, reset, watch } = useForm();
+  const navigate = useNavigate();
 
-  const handleSubmit = async e => {
-    e.preventDefault();
-    console.log('Form Data:', formData);
+  const onSubmit = async data => {
+    console.log('Form Data:', data);
     try {
-      const data = await registerUser(formData);
-      // console.log('Response Data:', data);
-      alert(data);
+      const response = await registerUser(data);
+      alert(response);
+      reset();
+      navigate('/login');
     } catch (error) {
-      // console.log('Error:', error);
       alert(error);
     }
   };
 
-  return <RegisterForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />;
+  return <RegisterForm register={register} handleSubmit={handleSubmit(onSubmit)} errors={errors} watch={watch} />;
 }
