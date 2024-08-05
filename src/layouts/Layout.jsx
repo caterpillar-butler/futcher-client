@@ -5,12 +5,10 @@ export default function Layout({ children }) {
   const location = useLocation();
 
   const renderHeader = () => {
-    switch (location.pathname) {
-      case '/register':
-        return <RegisterHeader />;
-      default:
-        return <DashBoardHeader />;
+    if (location.pathname === '/register' || location.pathname === '/login') {
+      return <RegisterHeader />;
     }
+    return <DashBoardHeader />;
   };
 
   return (
