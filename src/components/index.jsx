@@ -3,3 +3,5 @@ export { default as DashBoardHeader } from './common/DashBoardHeader';
 export { default as RegisterHeader } from './common/RegisterHeader';
 
 export { default as RegisterForm } from './form/RegisterForm';
+
+export { default as FinderOfWeek } from './FinderOfWeek';
