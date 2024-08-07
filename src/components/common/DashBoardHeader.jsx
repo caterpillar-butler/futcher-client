@@ -47,11 +47,11 @@ export default function Header() {
       <div className="flex flex-col items-center justify-center h-full">
         <Link to="#" className="h-220 w-220">
           <div className="bg-white h-220 w-220 border border-solid border-white rounded-full flex items-center justify-center -mt-10">
-            <Img
+            {/* <Img
               src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_960_720.jpg"
               alt="Placeholder image"
               className="rounded-full"
-            />
+            /> */}
           </div>
         </Link>
         <div className="text-center mt-40px ">
