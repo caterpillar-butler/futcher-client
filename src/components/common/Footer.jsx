@@ -29,9 +29,7 @@ export default function Footer() {
             <FaTwitter className="text-6xl hover:text-gray-700" />
           </Link>
         </div>
-        <p className="text-center text-sm">
-          Copyright 2021 BR Media Inc. | All Rights Reserved
-        </p>
+        <p className="text-center text-sm">Copyright 2021 BR Media Inc. | All Rights Reserved</p>
       </div>
     </footer>
   );

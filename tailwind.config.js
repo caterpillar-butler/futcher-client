@@ -6,6 +6,7 @@ module.exports = {
       height: {
         450: '450px',
         220: '220px',
+        200: '200px',
         280: '280px',
         60: '60px',
       },
@@ -23,6 +24,8 @@ module.exports = {
         '-10': '-10px',
         '40px': '40px',
         '5px': '5px',
+        '10px': '10px',
+        '20px': '20px',
       },
       fontSize: {
         '27px': '27px',
